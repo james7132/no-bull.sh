@@ -2,8 +2,8 @@
 title = "About Me"
 +++
 
-Hi! I'm James, a software engineer, currently living in the San Francisco Bay
-Area.
+Hi! I'm James, a software engineer currently living in the San Francisco Bay
+Area. I 
 
 I was born with [infantile nystagmus
 syndrome](https://en.wikipedia.org/wiki/Nystagmus). This has heavily impacted
@@ -12,9 +12,8 @@ and any semblance of hand-eye coordination. I can't drive (legally), and don't
 expect me be playing seriously in any ball sport.
 
 From a young age, this disconnect with the physical world has made me
-turn my pursuits inwards. I've always loved the sciences, and held the great
-engineers and mathematicians of our time in high esteem. Our world, cold and
-indifferent to our existence, holds unfathomable complexity and beauty.
+turn my pursuits inwards. I learned to program at the age of 8, learning QBASIC,
+Java, and C before high school. 
 
 ## Core Personal Values
 
