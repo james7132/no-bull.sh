@@ -3,7 +3,7 @@ title = "About Me"
 +++
 
 Hi! I'm James, a software engineer currently living in the San Francisco Bay
-Area. I 
+Area.
 
 I was born with [infantile nystagmus
 syndrome](https://en.wikipedia.org/wiki/Nystagmus). This has heavily impacted
@@ -13,7 +13,7 @@ expect me be playing seriously in any ball sport.
 
 From a young age, this disconnect with the physical world has made me
 turn my pursuits inwards. I learned to program at the age of 8, learning QBASIC,
-Java, and C before high school. 
+Java, and C before high school.
 
 ## Core Personal Values
 

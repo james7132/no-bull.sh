@@ -10,8 +10,10 @@ minify_html = true
 generate_feeds = true
 feed_filenames = ["atom.xml"]
 
-[markdown]
-highlight_code = true
+[markdown.highlighting]
+error_on_missing_language = true
+style = "inline"
+theme = "github-dark"
 
 [extra]
 site_name = "no bull.sh"
