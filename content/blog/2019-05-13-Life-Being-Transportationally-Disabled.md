@@ -1,6 +1,7 @@
 +++
 title = "Life being Transportationally Disabled"
-tags = []
+date = "2019-05-13"
+path = "blog/2019/05/13/life-being-transportationally-disabled"
 +++
 It's 2019. For decades, the United States has had the world's most expansive
 road system. For an American, it is nearly unthinkable to live without a car to
