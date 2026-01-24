@@ -4,7 +4,9 @@
   <section class="hero is-dark is-small">
     <div class="hero-body container has-text-centered">
       <p class="title">
-        {{ page.title }}
+        <a href="{{ page.path }}">
+          {{ page.title }}
+        </a>
       </p>
       {% if page.date or page.updateDate or page.description %}
         <p class="subtitle">
@@ -38,5 +40,20 @@
     <section class="section container post content">
       <p>{{ page.content | safe }}</p>
   {% endif %}
+  <p id="page-footer">
+  {% if page.taxonomies.tags %}
+    {% set post_tags = page.taxonomies.tags | sort | unique(case_sensitive=false) %}
+    Tags:
+    {% for tag in post_tags %}
+      <a href="/blog/tag/{{ tag | slugify }}">{{ tag }}</a>
+      {%- if not loop.last %}{{ "," | safe }} {%endif -%}
+    {% endfor %}
+    |
+    <a href="{{ page.permalink }}">Permalink</a>
+  {% else %}
+    <a href="{{ page.permalink }}">Permalink</a>
+  {% endif %}
+  </p>
   </section>
-{% endblock content %}
+
+  {% endblock content %}

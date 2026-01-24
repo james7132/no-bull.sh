@@ -2,6 +2,9 @@
 title = "Fuck it, we write"
 date = "2026-01-20"
 path = "blog/2026/01/20/fuck-it-we-write"
+
+[taxonomies]
+tags = ["Personal"]
 +++
 
 I've had this blog, on it's various domains, for probably close to 10 years now.

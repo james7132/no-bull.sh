@@ -1,0 +1,16 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<section class="section container">
+  <h3>
+    Tags
+  </h3>
+    {% for term in terms %}
+      <a href="{{ term.path }}">
+        {{ term.name }}
+      </a>
+    {% endfor %}
+</section>
+
+{% endblock content %}

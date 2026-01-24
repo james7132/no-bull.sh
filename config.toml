@@ -9,6 +9,11 @@ minify_html = true
 
 generate_feeds = true
 feed_filenames = ["atom.xml"]
+taxonomy_root = "blog"
+
+taxonomies = [
+  { name = "tags", feed = true, render = true }
+]
 
 [markdown.highlighting]
 error_on_missing_language = true

@@ -2,6 +2,7 @@
 
 {% block content %}
   <section class="section container">
+    <p>{{ section.content }}</p>
     <ul>
       {% for page in section.pages %}
         <li>
@@ -10,6 +11,16 @@
         </li>
       {% endfor %}
     </ul>
-    <p>{{ section.content }}</p>
+    <br/>
+    <p>
+    Tags:
+    {% set tags = get_taxonomy(kind="tags") %}
+    {% for term in tags.items %}
+      <a href="{{ term.path }}">
+        {{ term.name }}{%- if not loop.last %}{{ "," | safe }} {%endif -%}
+      </a>
+    {% endfor %}
+    </p>
+
   </section>
 {% endblock content %}

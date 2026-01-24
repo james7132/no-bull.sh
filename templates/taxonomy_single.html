@@ -1,0 +1,19 @@
+{% extends "page.html" %}
+
+{% block content %}
+<section class="section container">
+  <h3>
+    Posts tagged with <a href="{{ current_url }}">{{ term.name }}</a>
+  </h3>
+  <br/>
+  <ul>
+      {% for page in term.pages %}
+      <li>
+          <time datetime="{{ page.date }}">{{ page.date }}</time></dt>
+          &ndash;
+          <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      </li>
+      {% endfor %}
+  </ul>
+</section>
+{% endblock content %}
