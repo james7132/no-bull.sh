@@ -173,9 +173,9 @@ described in the protocol. The end-to-end encryption periodically broke and
 rendered chat history completely inaccessible.
 
 We also tried the more resource efficient home server implementations like
-[Conduit](https://conduit.rs/) and it's fork
+[Conduit](https://conduit.rs/) and its fork
 [Conduwuit](https://github.com/x86pup/conduwuit), but that exacerbated the
-combinnatorial feature support woes even more. Instead of just N different
+combinatorial feature support woes even more. Instead of just N different
 clients having problems with one home server, we now had M different server
 implementations combined with said N clients for a whole N-by-M compatibility
 matrix of problems. All of this just so a brand new user to get started chatting
