@@ -36,6 +36,10 @@ including manga, music, games, prints, figures, or anything else. As a first
 order approximation, it's not that far off from the English term "indie" or
 "independent"; however, there are a few key differences.
 
+The first major difference is that doujin goods are typically only physically
+distributed at dedicated doujin events. At first, this seems awfully backwards,
+maybe even regressive, in an post-Internet age.
+
 It's not uncommon for doujin works to be direct derivative works of another
 intellectual property. In other words, fanworks. In the west, this is a nearly
 unheard of, as copyright law overwhelmingly favors the IP owner. Create a fan

@@ -7,7 +7,7 @@ path = "blog/2026/01/20/fuck-it-we-write"
 tags = ["Personal"]
 +++
 
-I've had this blog, on it's various domains, for probably close to 10 years now.
+I've had this blog, on its various domains, for probably close to 10 years now.
 I've written quite a few articles, yet have published basically *none* of them.
 Each time I've written something, my perfectionist tendencies would repeatedly
 stop me just short of actually publishing and let perfect be the enemy of good

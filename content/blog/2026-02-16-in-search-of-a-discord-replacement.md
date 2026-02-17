@@ -14,8 +14,8 @@ extremely useful and borderline irreplacable throughout many facets of my life.
 However, since the start of the pandemic, my friends and I have watched the slow
 but inevitable degradation of service, unfixed bugs, and watching the company
 deseperately flail about trying to achieve profitability. Each time we'd
-encounter some kind of bug, the chat would inevitably be flooded with cries of
-"We've ***GOT*** to get off Discord." Each time this happens, I'd look into
+encounter some kind of bug, the voice chat I frequent would be flooded with cries
+of "We've ***GOT*** to get off Discord." Each time this happens, I'd look into
 alterantives, maybe try one out, but never really pull the trigger on migrating
 to an alternative.
 
@@ -29,7 +29,7 @@ Discord, decided to enforce this requirement universally instead of just the
 jursidiction where it's legally required.
 
 Many users, myself included, view this as a major breach of trust and the final
-stage of years of gradual enshitification. It's lit a fire under our ass to
+stage of years of gradual enshittification. It's lit a fire under our ass to
 finally figure out a migration plan away from Discord. Documented below are my
 general findings and suitability for the communities I help run.
 
@@ -77,9 +77,9 @@ non-negotiable:
    to support thousands of users there needs to be a way to support organized
    threaded chats.
  - **Decent Mobile Experience** - A mobile app shouldn't be required, and a
-   progressive web app might be acceptable in the iterim, but
+   progressive web app (PWA) might be acceptable in the interim, but
    allowing users to access the chat from a mobile phone is a strict requirement
-   for community engagement nowadays..
+   for community engagement nowadays.
  - **Self-hostable** - The laws that prompted the need for age verification still
    apply in target jurisdictions, and relying on large platforms that are easy
    targets for lawsuits will just result in the community hopping from platform
@@ -87,13 +87,13 @@ non-negotiable:
 
 There is also a short list of "nice to have" features:
 
- - **FOSS** - This relates heavily to self-hosting, but having direct source code
-   access helps the community contribute back and build a better experience
-   together.
+ - **Free and Open Source (FOSS)** - This relates heavily to self-hosting, but
+   having direct source code access helps the community contribute back and
+   build a better experience together.
  - **Minimal Vibecoding** - In the wake of Discord's announcement, there's been a
-   glut of opprotunistic vibecoders trying to steal marketshare. While the vast
+   glut of opportunistic vibecoders trying to steal marketshare. While the vast
    majority of them can be easily ruled out, there's a small handful of projects
-   that have some level of plausible deniabililty. While vibecoding isn't a hard
+   that have some level of plausible deniabilty. While vibecoding isn't a hard
    dealbreaker, it poses a serious question of whether the application
    can be trusted to be properly maintained into the indefinite future.
  - **End-to-end Encryption** - Privacy is important! It would be nice to have 1:1
@@ -112,29 +112,35 @@ There is also a short list of "nice to have" features:
 # Non-Starters
 Let's start off by ruling out some major players in the space that are strict
 non-starters:
- - **Good ol' IRC** - The onboarding experience is not well suited for modern
+ - **Good ol' [IRC](https://en.wikipedia.org/wiki/IRC)** - The onboarding experience is not well suited for modern
    communities. Needing to have someone set up an IRC bouncer for non-technical
    users is already a non-starter.
- - **Telegram** - Cannot be self hosted. Ties to the [Russian
-   government][telegram-government] make it a serious security concern. Not FOSS.
- - **WhatsApp** Cannnot be self-hosted, does not support mulitple text and voice
-   chat in large communities. Not FOSS. Meta's ownership of WhatsApp also raises
-   more privacy concerns than it resolves.
- - **QQ, WeChat** - Cannot be self-hosted. Ties to the [Chinese
-   government][wechat-government] make it a serious security concern. Not FOSS.
- - **LINE** - Cannnot be self-hosted, does not support mulitple text and voice
-   chat in large communities. Not FOSS.
- - **Steam Chat** - Not self-hostable. Not FOSS. All chat has a very low TTL of
-   only two weeks. It has text and voice chat and screensharing, but does not
-   have video chat.
- - **Slack, Microsoft Teams, Google Chat** - Cannot be self-hosted.  Not well
+ - [**Telegram**](https://telegram.org/) - Cannot be self hosted. Ties to the
+   [Russian government][telegram-government] make it a serious security concern.
+   Not FOSS.
+ - [**WhatsApp**](https://www.whatsapp.com/) - Cannnot be self-hosted, does not
+   support multiple text and voice chat in large communities. Not FOSS. Meta's
+   ownership also raises more privacy concerns than it resolves.
+ - **[QQ](https://im.qq.com/index/), [WeChat](https://www.wechat.com/en/)** -
+   Cannot be self-hosted. Ties to the [Chinese government][wechat-government]
+   make it a serious security concern. Not FOSS.
+ - [**LINE**](https://www.line.me/en/) - Cannot be self-hosted, does not support
+   multiple text and voice chat in large communities. Not FOSS.
+ - [**Steam Chat**](https://steamcommunity.com/chat) - Not self-hostable. Not
+   FOSS. All chat has a very low TTL of only two weeks. It has text and voice chat
+   and screensharing, but does not have video chat.
+ - **[Slack](https://slack.com/),
+   [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams),
+   [Google Chat](https://chat.google.com/)** - Cannot be self-hosted.  Not well
    suited for large communities of thousands of users due to per-user monthly
    costs. Limited message history on free edition. Not FOSS.
- - **Rocket.chat** - Self-hostable, FOSS, has a rather nice feature set, but
-   voice calls are only available for [enterprise customers][rocketchat-pricing]???
-   Free version limited to only 50 users. Need to contact support to enable more.
- - **Teamspeak** - Self-hostable, not FOSS. Has a mobile app. Free license is
-   limited to only 32 users. 1024 users for $500/year.
+ - [**Rocket.chat**](https://www.rocket.chat/) - Self-hostable, FOSS, has a rather
+   nice feature set, but voice calls are only available for
+   [enterprise customers][rocketchat-pricing]???  Free version limited to only 50
+   users. Need to contact support to enable more.
+ - [**Teamspeak**](https://www.teamspeak.com/en/) - Self-hostable, not FOSS. Has
+   a mobile app. Free license is limited to only 32 users. 1024 users for
+   $500/year.
  - [**Root**](https://www.rootapp.com/) - Not open source. Not self-hostable.
    Does not have a publicly accessible mobile app.
  - [**Guilded.gg**](https://www.guilded.gg/) - Not open source. Not
@@ -148,11 +154,11 @@ non-starters:
 
 ## Matrix
 Bar IRC and XMPP, [Matrix](https://matrix.org/) is probably been one of the longest
-lived FOSS chat options out there. It's 2.0 featureset seems to match up with
+lived FOSS chat options out there. Its 2.0 featureset seems to match up with
 everything we want and more.
 
 However, self-hosting Matrix is a genuine pain in the ass. Synapse is a resource
-guzzler beyond compare. An *idle* single-user instance uses 4GB of RAM. It's
+guzzler beyond compare. An *idle* single-user instance uses 4GB of RAM. Its
 replacement, [Dendrite](https://github.com/element-hq/dendrite), is
 simultaneously vaporware and maintainence mode. Dendrite's replacement, [Synapse
 Pro](https://element.io/en/server-suite/synapse-pro), isn't really self-hostable
@@ -165,10 +171,12 @@ clients but Element's latest and greatest failed to support all of the features
 described in the protocol. The end-to-end encryption periodically broke and
 rendered chat history completely inaccessible.
 
-All of this, despite the fact that Matrix has been around for so long is truly
-such an abysmal dogshit state of affairs. It's almost like the devs at Element
-and the greater Matrix community want the experience to remain as broken as it is
-now.
+Matrix has been around for 10+ years and has had major corporate backing, yet its
+UX still feels worse than any alpha-quality options on this list, including some
+of the clearly vibecoded projects that have been recently announced. This is
+truly an abysmal dogshit state of affairs for such a platform. It's almost like
+the devs at Element and the greater Matrix community wants the experience to
+remain as broken as it is now.
 
 ## Signal
 [Signal](https://signal.org/#signal) is *the* E2EE chat app and protocol. It's
@@ -193,8 +201,8 @@ It seemingly has all of the features we expect out of Discord out of the box, an
 is free and open source software under AGPLv3.
 
 The project is really new, only being announced and open sourced within the last
-month. The entire project is 1.5 million LoC and there is no git history prior to
-open sourcing. The author claims that they did not [vibecode
+month. The entire project is 1.5 million lines of code and there is no git history
+prior to open sourcing. The author claims that they did not [vibecode
 it](https://blog.fluxer.app/how-i-built-fluxer-a-discord-like-chat-app/) and they
 did the "normal" practice of squashing history when making an initial release,
 but I feel like that is just a plausibly deniable excuse, and will need to wait
@@ -219,8 +227,8 @@ does not have a mobile app or PWA support. It's unclear whether this is the
 result of vibecoding or just general developer incompetence. Given the [author's
 comments](https://www.reddit.com/r/selfhosted/comments/1r08bd8/comment/o4l2tr0/)
 on use of AI for the interface and their clearly AI generated profile
-pic on GitHub, there's a high likeihood that a non-insignificant amount of the
-app was vibecocded and calls into question if they can be trusted to actually
+pic on GitHub, there's a high likelihood that a non-insignificant amount of the
+app was vibecoded and calls into question if they can be trusted to actually
 maintain the app long term.
 
 ## Stoat (formerly Revolt)
@@ -232,7 +240,7 @@ audio. It's never supported video chat or screensharing, and does not have a
 usable mobile app yet.
 
 It's also set up such that self-hosting includes infrastructure for all of
-Discord. You can have the equivalent multiple Discord servers on the same
+Discord. You can have the equivalent of multiple Discord servers on the same
 self-hosted instance. This poses some extra headache for the admins, as users can
 hide discussions that are out of reach of moderators or system administrators.
 
@@ -245,11 +253,9 @@ of Discord down to the API calls being made. They have a custom client and serve
 that can work with each other or be used with Discord's official API. It's all
 FOSS and self-hostable.
 
-It seems, at time of writing, Spacebar does not support anything tied to a voice
-channel in Discord.
-
-Howver, due to it's nature in attempting to replicate Discord 1:1, it lacks a
-mobile app.
+However, due to its nature in attempting to replicate Discord 1:1, it lacks a
+mobile app. At time of writing, it seems like Spacebar does not support anything
+tied to a voice channel in Discord.
 
 ## XMPP (with Fluux Messenger)
 [Fluux Messenger](https://github.com/processone/fluux-messenger) from ProcessOne
@@ -261,17 +267,19 @@ integration with Jitsi for voice, video, and screenshare.
 
 Fluux Messenger also has the same licensing issues as Fluxer.app. It's also
 AGPLv3 with a CLA, but thankfully XMPP is an open protocol so any adequate
-frontend can be used as a subsititute.
+frontend can be used as a substitute.
 
 ## Mumble
 [Mumble](https://www.mumble.info/) is a FOSS, self-hostable, VoIP software and is
 made to be close to Teamspeak in UX. It's created with a desktop use case in mind
-but there are compatible third party mobile apps. It's voice channels are
+but there are compatible third party mobile apps. Its voice channels are
 structured close to that of Discord's, where users can hop in and out at any
 time, and the channels exist independently from any single given call. It's a
 voice chat-first application with some level of support for text chat for those
 in a voice channel. Joining a server requires actively joining a voice channel.
-Unlike Discord, the text chat does not have long term text chat history. It does
+Unlike Discord, the text chat does not have long term text chat history. I think
+this is appropriate for a text chat that is purely supplemental to a voice chat,
+but that It does
 not support video chat or screensharing.
 
 ## Zulip (w/ Jitsi)
@@ -282,7 +290,7 @@ which support voice, video and screenshare. It has a usable mobile app.
 
 As a text chat, it's probably the most complete and solid experience out of all
 of the options in this list. Zulip's threading model, or "topics" as they're
-called in Zulip venacular, take getting used to, as every conversation is in a
+called in Zulip vernacular, take getting used to, as every conversation is in a
 topic, and each channel does not have a top level discussion that can be branched
 from.
 
@@ -301,18 +309,20 @@ Thus far, out of all of the options I've reviewed, Zulip, with Jitsi, might be
 the best immediate fit for the requirements outlined in this post. It seems like
 it ticks all of the boxes for a usable UX, solid self-hosting support, has a
 usable set of cross-platform clients, and seems to support all of the immediate
-fundamental features most Discord communities are used to. It's model isn't a
-great 1:1 fit with what users expect out of a Discord server and it's interface
+fundamental features most Discord communities are used to. Its model isn't a
+great 1:1 fit with what users expect out of a Discord server and its interface
 is definitely oriented for use as a business oriented chat, but, given enough
-time, I think most users could become accustomed to it's use.
+time, I think most users could become accustomed to its use.
 
-Fluxer.app might be a viable alternative in the future, as it's feature set
+Fluxer.app might be a viable alternative in the future, as its feature set
 aims to directly compete with that of Discord's. However, the intent on
 monetization and lack of FOSS engagement, poor self-hosting support, and
-questionable licensing decisions casts doubt on it's long term viability. In the
-case of a FOSS rugpull (a la Enby vs Jellyfin), I'm sure the community will be
-able to pick up the slack eventually, but that may be way too far out to consider
-for now.
+questionable licensing decisions casts doubt on its long term viability. In the
+case of a FOSS rugpull (a la [Emby vs
+Jellyfin](https://jellyfin.org/docs/general/about/#why-did-you-fork)), I'm sure
+the community will be able to pick up the slack eventually, but that may be way
+too far out to consider for now, and I would rather not do a secondary migration
+in the case of such an event.
 
 That's it for now.  As I try more alternatives, I'll be sure to update this post
 with my observations. I don't think it's practical to migrate very large
@@ -349,9 +359,9 @@ really hits the fan may be a viable migration path forward.
 |Guilded.gg |❌  |❌|❌    |❌  |❌   |❌   |❌         |
 |Echoed.gg |❌  |❌ |❌    |✅  |✅   |❓   |❓         |
 
-[^1]: No mobile app but there is PWA support.
-[^2]: Requires one of the many community made mobile apps, feature support might
+[^1]: Requires one of the many community made mobile apps, feature support might
     be inconsistent.
+[^2]: No mobile app but there is PWA support.
 
 [discord-age-verification]: https://discord.com/press-releases/discord-launches-teen-by-default-settings-globally
 [discord-id-leak]: https://www.bbc.com/news/articles/c8jmzd972leo
