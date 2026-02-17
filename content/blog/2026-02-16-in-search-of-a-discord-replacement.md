@@ -329,6 +329,11 @@ with my observations. I don't think it's practical to migrate very large
 communities at the current moment, but keeping an alternative around in case shit
 really hits the fan may be a viable migration path forward.
 
+# Acknowledgements
+This blog post was researched and edited by the following members of the
+discord.gg/touhou community: Shio, ReUKing, Great Sage, Jordy, Mami,
+Photographicrat, and Ember.
+
 # Appendix: Summary Table
 
 |Name|FOSS|Self-host|Mobile|Text|Voice|Video|Screenshare|Notes|
