@@ -149,7 +149,8 @@ non-starters:
  - [**Echoed.gg**](https://echoed.gg/) - Not open source. Not self-hostable.
  - [A](https://github.com/areoseek/CutTheCord)
    [multitude](https://github.com/dmccoystephenson/accord-prototype) of
-   [opportunistic](https://github.com/WAN-Ninjas/AmityVox) vibecoding asshats
+   [opportunistic](https://github.com/WAN-Ninjas/AmityVox)
+   [vibecoding](https://github.com/ancsemi/Haven) asshats
    trying to stake out a name for themselves.
 
 ## Matrix
