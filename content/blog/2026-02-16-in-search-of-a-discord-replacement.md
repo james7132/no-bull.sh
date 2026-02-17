@@ -153,9 +153,9 @@ non-starters:
    trying to stake out a name for themselves.
 
 ## Matrix
-Bar IRC and XMPP, [Matrix](https://matrix.org/) is probably been one of the longest
-lived FOSS chat options out there. Its 2.0 featureset seems to match up with
-everything we want and more.
+Barring IRC and XMPP, [Matrix](https://matrix.org/) is probably been one of the
+longest lived FOSS chat options out there. Its 2.0 featureset seems to match up
+with everything we want and more.
 
 However, self-hosting Matrix is a genuine pain in the ass. Synapse is a resource
 guzzler beyond compare. An *idle* single-user instance uses 4GB of RAM. Its
