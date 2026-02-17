@@ -8,14 +8,14 @@
           {{ page.title }}
         </a>
       </p>
-      {% if page.date or page.updateDate or page.description %}
+      {% if page.date or page.updated or page.description %}
         <p class="subtitle">
-          {% if page.date or page.updateDate %}
+          {% if page.date or page.updated %}
             {% if page.date %}
               {{ page.date | date(format="%B %d %Y") }}
             {% endif %}
-            {% if page.updateDate %}
-              (Updated {{ page.updateDate | date(format="%B %d %Y") }})
+            {% if page.updated %}
+              (Updated {{ page.updated | date(format="%B %d %Y") }})
             {% endif %}
             {% if page.description %}
               |
