@@ -172,6 +172,18 @@ clients but Element's latest and greatest failed to support all of the features
 described in the protocol. The end-to-end encryption periodically broke and
 rendered chat history completely inaccessible.
 
+We also tried the more resource efficient home server implementations like
+[Conduit](https://conduit.rs/) and it's fork
+[Conduwuit](https://github.com/x86pup/conduwuit), but that exacerbated the
+combinnatorial feature support woes even more. Instead of just N different
+clients having problems with one home server, we now had M different server
+implementations combined with said N clients for a whole N-by-M compatibility
+matrix of problems. All of this just so a brand new user to get started chatting
+with their friends. Apparently there's now
+[Tuwunel](https://matrix-construct.github.io/tuwunel/) and
+[Continuwuity](https://continuwuity.org/), but I'm too burnt out on Matrix as a
+whole to try to bark up that tree.
+
 Matrix has been around for 10+ years and has had major corporate backing, yet its
 UX still feels worse than any alpha-quality options on this list, including some
 of the clearly vibecoded projects that have been recently announced. This is
