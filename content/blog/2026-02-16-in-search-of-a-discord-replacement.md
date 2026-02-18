@@ -363,7 +363,7 @@ Photographicrat, and Ember.
 |Jitsi |✅   |✅    |✅    |❌  |✅  |✅    |✅         |
 |Zulip |✅   |✅    |✅    |✅  |❌   |❌   |❌         |
 |Spacebar|✅ |✅    |❌    |✅   |❌  |❌   |❌         |
-|Mumble |✅   |✅   |✅[^1]|❌  |✅  |✅    |✅         |
+|Mumble |✅   |✅   |✅[^1]|✅  |✅   |❌   |❌         |
 |Signal|✅   |✅    |✅    |✅  |✅   |✅   |✅         | Poorly suited for large communities.
 |Rocket.chat|✅   |✅|✅   |✅  |✅   |✅   |✅         | Free instance limited in the number of users.
 |IRC |✅  |✅       |✅[^1]|✅  |❌   |❌   |❌         |
