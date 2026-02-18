@@ -2,6 +2,9 @@
 title = "In Search of a Discord Replacement"
 path = "blog/2026/02/16/in-search-of-a-discord-replacement"
 date = "2026-02-16"
+
+[taxonomies]
+tags = ["Discord", "Self-hosted", "Privacy", "Open Source"]
 +++
 
 I've really liked Discord. I'm one of the early adopters from 2016 and
