@@ -153,7 +153,8 @@ non-starters:
  - [A](https://github.com/areoseek/CutTheCord)
    [multitude](https://github.com/dmccoystephenson/accord-prototype) of
    [opportunistic](https://github.com/WAN-Ninjas/AmityVox)
-   [vibecoding](https://github.com/ancsemi/Haven) asshats
+   [vibecoding](https://github.com/ancsemi/Haven)
+   [asshats](http://github.com/blitechat/BLITE)
    trying to stake out a name for themselves.
 
 ## Matrix
