@@ -161,8 +161,7 @@ Barring IRC and XMPP, [Matrix](https://matrix.org/) is probably been one of the
 longest lived FOSS chat options out there. Its 2.0 featureset seems to match up
 with everything we want and more.
 
-However, self-hosting Matrix is a genuine pain in the ass. Synapse is a resource
-guzzler beyond compare. An *idle* single-user instance uses 4GB of RAM. Its
+However, self-hosting Matrix is a genuine pain in the ass. Synapse's
 replacement, [Dendrite](https://github.com/element-hq/dendrite), is
 simultaneously vaporware and maintainence mode. Dendrite's replacement, [Synapse
 Pro](https://element.io/en/server-suite/synapse-pro), isn't really self-hostable
