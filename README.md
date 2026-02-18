@@ -1,5 +1,4 @@
 # no-bull.sh
-
 My personal website. Built with [zola](https://www.getzola.org/),
 [SponsorKit](https://github.com/antfu/sponsorkit), and GitHub Pages.
 
@@ -7,8 +6,13 @@ My personal website. Built with [zola](https://www.getzola.org/),
 The entire site can be built with `zola build`. Editing can be done live with
 `zola serve`.
 
-## License
+## Contributing
+While this project is hosted on a git forge with pull request support and is 
+under an open source license, this is a personal website built for exclusively 
+for my use. Thus, I will not be accepting PRs attempting to substantively alter
+the content on it.
 
+## License
 All code in this repository is dual-licensed under either:
 
 * MIT License ([LICENSE-MIT](LICENSE-MIT) or
