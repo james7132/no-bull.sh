@@ -2,6 +2,7 @@
 title = "In Search of a Discord Replacement"
 path = "blog/2026/02/16/in-search-of-a-discord-replacement"
 date = "2026-02-16"
+updated = "2026-02-18"
 
 [taxonomies]
 tags = ["Discord", "Self-hosted", "Privacy", "Open Source"]
@@ -194,6 +195,15 @@ of the clearly vibecoded projects that have been recently announced. This is
 truly an abysmal dogshit state of affairs for such a platform. It's almost like
 the devs at Element and the greater Matrix community wants the experience to
 remain as broken as it is now.
+
+EDIT: Not even 24 hours after this post was published, a [scathing 
+report](https://soatok.blog/2026/02/17/cryptographic-issues-in-matrixs-rust-library-vodozemac/)
+came out detailing multiple side-channel vulnerabilities in Matrix.org's Vodozemac
+library powering Matrix's E2EE feature. I'm no cryptography expert and cannot
+evaluate the finer technical claims of the article, but the way Matrix.org 
+handled this report on a person-to-person basis is deeply unprofessional. It's
+really disappointing to see, and is pushing me even further away from it as
+a platform.
 
 ## Signal
 [Signal](https://signal.org/#signal) is *the* E2EE chat app and protocol. It's
