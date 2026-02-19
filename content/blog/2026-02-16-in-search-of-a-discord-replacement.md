@@ -196,11 +196,11 @@ truly an abysmal dogshit state of affairs for such a platform. It's almost like
 the devs at Element and the greater Matrix community wants the experience to
 remain as broken as it is now.
 
-EDIT: Not even 24 hours after this post was published, a [scathing 
+EDIT: Not even 24 hours after this post was published, a [scathing
 report](https://soatok.blog/2026/02/17/cryptographic-issues-in-matrixs-rust-library-vodozemac/)
 came out detailing multiple side-channel vulnerabilities in Matrix.org's Vodozemac
 library powering Matrix's E2EE feature. I'm no cryptography expert and cannot
-evaluate the finer technical claims of the article, but the way Matrix.org 
+evaluate the finer technical claims of the article, but the way Matrix.org
 handled this report on a person-to-person basis is deeply unprofessional. It's
 really disappointing to see, and is pushing me even further away from it as
 a platform.
@@ -225,7 +225,8 @@ using Discord right now knows how unruly that can be.
 to replace Discord. It's clearly developed with the intention of being a direct
 replacement for Discord's service, and has monetization built in from the get go.
 It seemingly has all of the features we expect out of Discord out of the box, and
-is free and open source software under AGPLv3.
+is free and open source software under AGPLv3, but currently not accepting any
+PRs due to an ongoing refactor.
 
 The project is really new, only being announced and open sourced within the last
 month. The entire project is 1.5 million lines of code and there is no git history
@@ -242,6 +243,12 @@ This isn't an uncommon combination to see used in FOSS rugpulls where the owner
 of a project takes it closed source, typically forcing a community fork in the
 process. This isn't usually a hard dealbreaker, but I would rather not risk the
 headache of a secondary migration from losing trust yet again.
+
+EDIT 2026/02/18: The author has published the
+[refactor](https://github.com/fluxerapp/fluxer/tree/refactor), which is in the
+open, and may soon be accepting PRs. They also [removed the
+CLA requirement](https://github.com/fluxerapp/fluxer/commit/3dce089fe2ea372d6f70c024fe060a2afefc4ce2).
+This is great to hear!
 
 ## Sharkord
 [Sharkord](https://sharkord.com/) is a relatively new FOSS project with the aim
@@ -343,13 +350,14 @@ time, I think most users could become accustomed to its use.
 
 Fluxer.app might be a viable alternative in the future, as its feature set
 aims to directly compete with that of Discord's. However, the intent on
-monetization and lack of FOSS engagement, poor self-hosting support, and
+monetization and lack of FOSS engagement, and poor self-hosting support. ~~and
 questionable licensing decisions casts doubt on its long term viability. In the
 case of a FOSS rugpull (a la [Emby vs
 Jellyfin](https://jellyfin.org/docs/general/about/#why-did-you-fork)), I'm sure
 the community will be able to pick up the slack eventually, but that may be way
 too far out to consider for now, and I would rather not do a secondary migration
-in the case of such an event.
+in the case of such an event.~~ EDIT 2026-02-18: [They've dropped the
+CLA!](https://github.com/fluxerapp/fluxer/commit/3dce089fe2ea372d6f70c024fe060a2afefc4ce2)
 
 That's it for now.  As I try more alternatives, I'll be sure to update this post
 with my observations. I don't think it's practical to migrate very large
