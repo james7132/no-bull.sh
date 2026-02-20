@@ -12,8 +12,9 @@ I've really liked Discord. I'm one of the early adopters from 2016 and
 enthusiastically convinced my friends and communities to move to it. Since then,
 I've developed a moderation bot. I helped build multiple communities of 10,000+
 users. I've made lifelong friends, helped build FOSS projects, and organized
-events and grassroots movements. For the past 10 years, Discord has been
-extremely useful and borderline irreplacable throughout many facets of my life.
+events and grassroots movements. All through Discord. For the past 10 years,
+Discord has been extremely useful and borderline irreplacable throughout many
+facets of my life.
 
 However, since the start of the pandemic, my friends and I have watched the slow
 but inevitable degradation of service, unfixed bugs, and watching the company
@@ -31,6 +32,22 @@ partner with third party vendors for verifying users' government IDs... which
 have been [leaked en masse][discord-id-leak]. In their infinite ~~wisdom~~ greed,
 Discord, decided to enforce this requirement universally instead of just the
 jursidiction where it's legally required.
+
+> EDIT 2026/02/19: Discord also stated they would be using
+[Persona](https://withpersona.com/), a Silicon Valley based age and ID
+verification service funded by Peter Thiel, billionaire chudcel extraordinaire.
+It was [recently revealed](https://vmfunc.re/blog/persona) that Persona had
+virtually their entire internal infrastructure exposed to the public internet.
+This tangibly proves that Discord and its partnered vendors cannot be trusted
+>with the personally identifiiable information.
+>
+> Furthermore, the same source revealed Persona has close ties to multiple
+unidentiifed US government agencies and OpenAI, and was selling the
+identification information to identify individuals of certain identities and
+ideologies, presumably for agencies like ICE. This shows that the information
+will not just be passively leaked to potentially malicious parties, but
+**actively provided to them for the purposes of harming members of marginalized
+communities.**
 
 Many users, myself included, view this as a major breach of trust and the final
 stage of years of gradual enshittification. It's lit a fire under our ass to
@@ -196,7 +213,7 @@ truly an abysmal dogshit state of affairs for such a platform. It's almost like
 the devs at Element and the greater Matrix community wants the experience to
 remain as broken as it is now.
 
-EDIT: Not even 24 hours after this post was published, a [scathing
+> EDIT 2026/02/18: Not even 24 hours after this post was published, a [scathing
 report](https://soatok.blog/2026/02/17/cryptographic-issues-in-matrixs-rust-library-vodozemac/)
 came out detailing multiple side-channel vulnerabilities in Matrix.org's Vodozemac
 library powering Matrix's E2EE feature. I'm no cryptography expert and cannot
@@ -244,7 +261,7 @@ of a project takes it closed source, typically forcing a community fork in the
 process. This isn't usually a hard dealbreaker, but I would rather not risk the
 headache of a secondary migration from losing trust yet again.
 
-EDIT 2026/02/18: The author has published the
+> EDIT 2026/02/18: The author has published the
 [refactor](https://github.com/fluxerapp/fluxer/tree/refactor), which is in the
 open, and may soon be accepting PRs. They also [removed the
 CLA requirement](https://github.com/fluxerapp/fluxer/commit/3dce089fe2ea372d6f70c024fe060a2afefc4ce2).
@@ -356,7 +373,9 @@ case of a FOSS rugpull (a la [Emby vs
 Jellyfin](https://jellyfin.org/docs/general/about/#why-did-you-fork)), I'm sure
 the community will be able to pick up the slack eventually, but that may be way
 too far out to consider for now, and I would rather not do a secondary migration
-in the case of such an event.~~ EDIT 2026-02-18: [They've dropped the
+in the case of such an event.~~
+
+> EDIT 2026/02/18: [They've dropped the
 CLA!](https://github.com/fluxerapp/fluxer/commit/3dce089fe2ea372d6f70c024fe060a2afefc4ce2)
 
 That's it for now.  As I try more alternatives, I'll be sure to update this post
