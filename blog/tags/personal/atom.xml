@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>no bull.sh - Personal</title>
+    <link rel="self" type="application/atom+xml" href="https://no-bull.sh/blog/tags/personal/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://no-bull.sh"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-01-20T00:00:00+00:00</updated>
+    <id>https://no-bull.sh/blog/tags/personal/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Fuck it, we write</title>
+        <published>2026-01-20T00:00:00+00:00</published>
+        <updated>2026-01-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://no-bull.sh/blog/2026/01/20/fuck-it-we-write/"/>
+        <id>https://no-bull.sh/blog/2026/01/20/fuck-it-we-write/</id>
+        
+        <content type="html" xml:base="https://no-bull.sh/blog/2026/01/20/fuck-it-we-write/">&lt;p&gt;I&#x27;ve had this blog, on its various domains, for probably close to 10 years now.
+I&#x27;ve written quite a few articles, yet have published basically &lt;em&gt;none&lt;&#x2F;em&gt; of them.
+Each time I&#x27;ve written something, my perfectionist tendencies would repeatedly
+stop me just short of actually publishing and let perfect be the enemy of good
+enough.&lt;&#x2F;p&gt;
+&lt;p&gt;Today, that ends.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve had this horrible decades-long habit of just enduring whatever bullshit
+comes my way, staying silent until I can&#x27;t bear it anymore. With all of the
+events over the past few years, this only seems to gets worse, and it&#x27;s becoming
+increasingly clear that I can not and should not stay silent anymore. It is
+precisely why this site is under the &lt;strong&gt;no-bull.sh&lt;&#x2F;strong&gt; domain. I&#x27;m sick and tired of
+all of the bullshit, the willful ignorance, and the slop surrounding us, and it&#x27;s
+due time for that frustration to find a healthy outlet.&lt;&#x2F;p&gt;
+&lt;p&gt;If you&#x27;ve worked with me professionally in the past, these posts may very well be
+a bit of a shock: I will not be self-censoring myself. Close friends know I can
+be extremely crass, and, at times, very abrasive. For good reason, I would hope.&lt;&#x2F;p&gt;
+&lt;p&gt;If this sounds like this is only a place for me to vent, I won&#x27;t deny that it
+will have a lot of potentially unhinged rants. However, it won&#x27;t be the only
+thing I will write about.  In the coming weeks and months, I will strive to
+post new articles on this blog. There&#x27;s already few ideas that need to be
+fleshed out:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;My opinions on LLMs and the AI hype cycle.&lt;&#x2F;li&gt;
+&lt;li&gt;Doujin culture in the United States in 2026 and beyond.&lt;&#x2F;li&gt;
+&lt;li&gt;Digital freedom and privacy in a increasingly authoritarian world.&lt;&#x2F;li&gt;
+&lt;li&gt;The current state of writing panic free code in Rust.&lt;&#x2F;li&gt;
+&lt;li&gt;Collaboration on FOSS projects in a multipolar world.&lt;&#x2F;li&gt;
+&lt;li&gt;The importance of FOSS governance.&lt;&#x2F;li&gt;
+&lt;li&gt;Using technology to address social problems.&lt;&#x2F;li&gt;
+&lt;li&gt;Life and death, grief and loss within the family.&lt;&#x2F;li&gt;
+&lt;li&gt;Anti-features and the rise of techno-Ludditism.&lt;&#x2F;li&gt;
+&lt;li&gt;The collapse of the open web.&lt;&#x2F;li&gt;
+&lt;li&gt;... and many more!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you&#x27;d like to join me on this adventure and be kept up to date on my latest
+ramblings, I&#x27;ll be broadcasting each on &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;no-bull.sh&quot;&gt;BlueSky&lt;&#x2F;a&gt; and this site provides
+an &lt;a href=&quot;&#x2F;atom.xml&quot;&gt;RSS feed&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
