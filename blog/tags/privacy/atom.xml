@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>no bull.sh - Privacy</title>
+    <link rel="self" type="application/atom+xml" href="https://no-bull.sh/blog/tags/privacy/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://no-bull.sh"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-02-18T00:00:00+00:00</updated>
+    <id>https://no-bull.sh/blog/tags/privacy/atom.xml</id>
+    <entry xml:lang="en">
+        <title>In Search of a Discord Replacement</title>
+        <published>2026-02-16T00:00:00+00:00</published>
+        <updated>2026-02-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://no-bull.sh/blog/2026/02/16/in-search-of-a-discord-replacement/"/>
+        <id>https://no-bull.sh/blog/2026/02/16/in-search-of-a-discord-replacement/</id>
+        
+        <content type="html" xml:base="https://no-bull.sh/blog/2026/02/16/in-search-of-a-discord-replacement/">&lt;p&gt;I&#x27;ve really liked Discord. I&#x27;m one of the early adopters from 2016 and
+enthusiastically convinced my friends and communities to move to it. Since then,
+I&#x27;ve developed a moderation bot. I helped build multiple communities of 10,000+
+users. I&#x27;ve made lifelong friends, helped build FOSS projects, and organized
+events and grassroots movements. All through Discord. For the past 10 years,
+Discord has been extremely useful and borderline irreplacable throughout many
+facets of my life.&lt;&#x2F;p&gt;
+&lt;p&gt;However, since the start of the pandemic, my friends and I have watched the slow
+but inevitable degradation of service, unfixed bugs, and watching the company
+deseperately flail about trying to achieve profitability. Each time we&#x27;d
+encounter some kind of bug, the voice chat I frequent would be flooded with cries
+of &quot;We&#x27;ve &lt;em&gt;&lt;strong&gt;GOT&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; to get off Discord.&quot; Each time this happens, I&#x27;d look into
+alterantives, maybe try one out, but never really pull the trigger on migrating
+to an alternative.&lt;&#x2F;p&gt;
+&lt;p&gt;On Febuary 9th 2026, Discord announced that it would be &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;discord.com&#x2F;press-releases&#x2F;discord-launches-teen-by-default-settings-globally&quot;&gt;universally requiring
+age verification&lt;&#x2F;a&gt;. This follows a series of laws passed
+in various jurisdictions around the world requiring age verification for access
+to potentially sensitive content. This has required most online platforms to
+partner with third party vendors for verifying users&#x27; government IDs... which
+have been &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c8jmzd972leo&quot;&gt;leaked en masse&lt;&#x2F;a&gt;. In their infinite &lt;del&gt;wisdom&lt;&#x2F;del&gt; greed,
+Discord, decided to enforce this requirement universally instead of just the
+jursidiction where it&#x27;s legally required.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EDIT 2026&#x2F;02&#x2F;19: Discord also stated they would be using
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;withpersona.com&#x2F;&quot;&gt;Persona&lt;&#x2F;a&gt;, a Silicon Valley based age and ID
+verification service funded by Peter Thiel, billionaire chudcel extraordinaire.
+It was &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;vmfunc.re&#x2F;blog&#x2F;persona&quot;&gt;recently revealed&lt;&#x2F;a&gt; that Persona had
+virtually their entire internal infrastructure exposed to the public internet.
+This tangibly proves that Discord and its partnered vendors cannot be trusted
+with the personally identifiiable information.&lt;&#x2F;p&gt;
+&lt;p&gt;Furthermore, the same source revealed Persona has close ties to multiple
+unidentiifed US government agencies and OpenAI, and was selling the
+identification information to identify individuals of certain identities and
+ideologies, presumably for agencies like ICE. This shows that the information
+will not just be passively leaked to potentially malicious parties, but
+&lt;strong&gt;actively provided to them for the purposes of harming members of marginalized
+communities.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Many users, myself included, view this as a major breach of trust and the final
+stage of years of gradual enshittification. It&#x27;s lit a fire under our ass to
+finally figure out a migration plan away from Discord. Documented below are my
+general findings and suitability for the communities I help run.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;requirements&quot;&gt;Requirements&lt;&#x2F;h1&gt;
+&lt;p&gt;My review and analysis is only for the communities I help run, and while I think
+the requirements are similar for most communities currently on Discord, they may
+not hold for everyone. There are three types of communities I participate in and
+help run:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Large centralized online communities&lt;&#x2F;strong&gt; - I help run
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;touhou&quot;&gt;discord.gg&#x2F;touhou&lt;&#x2F;a&gt;, one of the largest Touhou fan
+communities on Discord. At time of writing, there are 55,000+ members in the
+server, with more than 2,000 active weekly active users. Orbiting it are a number
+of smaller targetted communities focused on different facets of the community,
+such as &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;touhouwiki.net&quot;&gt;Touhou Wiki&lt;&#x2F;a&gt;, &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;gensokyoradio.com&quot;&gt;Gensokyo
+Radio&lt;&#x2F;a&gt;, and various other niche communities.
+These tend to be a central gathering space for those in the community without any
+one particular central goal in mind, often acting as just an online &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Third_place&quot;&gt;third
+place&lt;&#x2F;a&gt; where members of a shared
+interest community can come together and openly discuss various topics. Many of
+these make heavy use of Discord&#x27;s voice channels, video chat, and screensharing.
+These servers have a hard requirement for adequate moderation tools for dealing
+with any bad actor willing to join the community.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Large productivity oriented communities&lt;&#x2F;strong&gt; - This includes the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;bevy&quot;&gt;Bevy
+Discord&lt;&#x2F;a&gt; and various FOSS development related servers.
+While these also act as a social gathering place, there is also a targetted
+productivitiy oriented goal associated with these servers.  These servers also
+have a hard requirement for adequate moderation tools for dealing with any bad
+actor willing to join the community.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Small friend group chats&lt;&#x2F;strong&gt; - These servers tend to be much smaller, topping off
+at only a few tens or hundreds of members. Unlike the others, most of the members
+of these groups already have a decent understanding of the other people in the
+server, and moderation tools are thus not a hard requirement.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;The following are what I would consider hard requirements that are
+non-negotiable:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Discord-like Onboarding UX&lt;&#x2F;strong&gt; - The greatest issue with bulding community
+comes from the experience of new users.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Multiple text and voice chat channels&lt;&#x2F;strong&gt; - The communitiies I help run need
+to support thousands of users there needs to be a way to support organized
+threaded chats.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Decent Mobile Experience&lt;&#x2F;strong&gt; - A mobile app shouldn&#x27;t be required, and a
+progressive web app (PWA) might be acceptable in the interim, but
+allowing users to access the chat from a mobile phone is a strict requirement
+for community engagement nowadays.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Self-hostable&lt;&#x2F;strong&gt; - The laws that prompted the need for age verification still
+apply in target jurisdictions, and relying on large platforms that are easy
+targets for lawsuits will just result in the community hopping from platform
+to platform.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;There is also a short list of &quot;nice to have&quot; features:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Free and Open Source (FOSS)&lt;&#x2F;strong&gt; - This relates heavily to self-hosting, but
+having direct source code access helps the community contribute back and
+build a better experience together.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Minimal Vibecoding&lt;&#x2F;strong&gt; - In the wake of Discord&#x27;s announcement, there&#x27;s been a
+glut of opportunistic vibecoders trying to steal marketshare. While the vast
+majority of them can be easily ruled out, there&#x27;s a small handful of projects
+that have some level of plausible deniabilty. While vibecoding isn&#x27;t a hard
+dealbreaker, it poses a serious question of whether the application
+can be trusted to be properly maintained into the indefinite future.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;End-to-end Encryption&lt;&#x2F;strong&gt; - Privacy is important! It would be nice to have 1:1
+DMs and small group chats support end-to-end encryption. Supporting it for
+large communities of thousands of users might not be the best idea though.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;TTL-ed messages&lt;&#x2F;strong&gt; - In line with the prior point about E2EE is the support
+for TTL&#x27;ed messages. Some of the servers I&#x27;m in are up to 10 years old, and
+have discussions that should have long been discarded. A TTL that is too short
+(i.e. 14 days) may be untenable, but a decently long TTL of a year or more
+might be acceptable.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Screensharing and video chat&lt;&#x2F;strong&gt; - Some of the communities I help run are
+heavily reliant on screensharing for shared activities (i.e. group watches,
+group gaming, raiding, etc.) It would be nice, though not strictly required,
+to support screensharing and video chat.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;non-starters&quot;&gt;Non-Starters&lt;&#x2F;h1&gt;
+&lt;p&gt;Let&#x27;s start off by ruling out some major players in the space that are strict
+non-starters:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Good ol&#x27; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;IRC&quot;&gt;IRC&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; - The onboarding experience is not well suited for modern
+communities. Needing to have someone set up an IRC bouncer for non-technical
+users is already a non-starter.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;telegram.org&#x2F;&quot;&gt;&lt;strong&gt;Telegram&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Cannot be self hosted. Ties to the
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.newsweek.com&#x2F;telegram-messenger-russia-fsb-ties-report-2083491&quot;&gt;Russian government&lt;&#x2F;a&gt; make it a serious security concern.
+Not FOSS.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.whatsapp.com&#x2F;&quot;&gt;&lt;strong&gt;WhatsApp&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Cannnot be self-hosted, does not
+support multiple text and voice chat in large communities. Not FOSS. Meta&#x27;s
+ownership also raises more privacy concerns than it resolves.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;im.qq.com&#x2F;index&#x2F;&quot;&gt;QQ&lt;&#x2F;a&gt;, &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.wechat.com&#x2F;en&#x2F;&quot;&gt;WeChat&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; -
+Cannot be self-hosted. Ties to the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;citizenlab.ca&#x2F;research&#x2F;we-chat-they-watch&#x2F;&quot;&gt;Chinese government&lt;&#x2F;a&gt;
+make it a serious security concern. Not FOSS.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.line.me&#x2F;en&#x2F;&quot;&gt;&lt;strong&gt;LINE&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Cannot be self-hosted, does not support
+multiple text and voice chat in large communities. Not FOSS.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;steamcommunity.com&#x2F;chat&quot;&gt;&lt;strong&gt;Steam Chat&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Not self-hostable. Not
+FOSS. All chat has a very low TTL of only two weeks. It has text and voice chat
+and screensharing, but does not have video chat.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;slack.com&#x2F;&quot;&gt;Slack&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;microsoft-teams&quot;&gt;Microsoft Teams&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;chat.google.com&#x2F;&quot;&gt;Google Chat&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; - Cannot be self-hosted.  Not well
+suited for large communities of thousands of users due to per-user monthly
+costs. Limited message history on free edition. Not FOSS.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.rocket.chat&#x2F;&quot;&gt;&lt;strong&gt;Rocket.chat&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Self-hostable, FOSS, has a rather
+nice feature set, but voice calls are only available for
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.rocket.chat&#x2F;pricing&quot;&gt;enterprise customers&lt;&#x2F;a&gt;???  Free version limited to only 50
+users. Need to contact support to enable more.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.teamspeak.com&#x2F;en&#x2F;&quot;&gt;&lt;strong&gt;Teamspeak&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Self-hostable, not FOSS. Has
+a mobile app. Free license is limited to only 32 users. 1024 users for
+$500&#x2F;year.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.rootapp.com&#x2F;&quot;&gt;&lt;strong&gt;Root&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Not open source. Not self-hostable.
+Does not have a publicly accessible mobile app.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.guilded.gg&#x2F;&quot;&gt;&lt;strong&gt;Guilded.gg&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Not open source. Not
+self-hostable. Never had a mobile app? Bought out by the pedophile platform,
+Roblox. No longer exists.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;echoed.gg&#x2F;&quot;&gt;&lt;strong&gt;Echoed.gg&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; - Not open source. Not self-hostable.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;areoseek&#x2F;CutTheCord&quot;&gt;A&lt;&#x2F;a&gt;
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dmccoystephenson&#x2F;accord-prototype&quot;&gt;multitude&lt;&#x2F;a&gt; of
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;WAN-Ninjas&#x2F;AmityVox&quot;&gt;opportunistic&lt;&#x2F;a&gt;
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ancsemi&#x2F;Haven&quot;&gt;vibecoding&lt;&#x2F;a&gt;
+&lt;a rel=&quot;external&quot; href=&quot;http:&#x2F;&#x2F;github.com&#x2F;blitechat&#x2F;BLITE&quot;&gt;asshats&lt;&#x2F;a&gt;
+trying to stake out a name for themselves.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;matrix&quot;&gt;Matrix&lt;&#x2F;h2&gt;
+&lt;p&gt;Barring IRC and XMPP, &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;matrix.org&#x2F;&quot;&gt;Matrix&lt;&#x2F;a&gt; is probably been one of the
+longest lived FOSS chat options out there. Its 2.0 featureset seems to match up
+with everything we want and more.&lt;&#x2F;p&gt;
+&lt;p&gt;However, self-hosting Matrix is a genuine pain in the ass. Synapse is a resource
+guzzler beyond compare. An &lt;em&gt;idle&lt;&#x2F;em&gt; single-user instance uses 4GB of RAM. Its
+replacement, &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;element-hq&#x2F;dendrite&quot;&gt;Dendrite&lt;&#x2F;a&gt;, is
+simultaneously vaporware and maintainence mode. Dendrite&#x27;s replacement, &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;element.io&#x2F;en&#x2F;server-suite&#x2F;synapse-pro&quot;&gt;Synapse
+Pro&lt;&#x2F;a&gt;, isn&#x27;t really self-hostable
+and is closed source. Arguably made just to grift EU governments out of their
+money.&lt;&#x2F;p&gt;
+&lt;p&gt;The true dealbreaker, though, has to be the new user experience. We tried
+registering multiple users onto a self-hosted instance, and found that all
+clients but Element&#x27;s latest and greatest failed to support all of the features
+described in the protocol. The end-to-end encryption periodically broke and
+rendered chat history completely inaccessible.&lt;&#x2F;p&gt;
+&lt;p&gt;We also tried the more resource efficient home server implementations like
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;conduit.rs&#x2F;&quot;&gt;Conduit&lt;&#x2F;a&gt; and its fork
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;x86pup&#x2F;conduwuit&quot;&gt;Conduwuit&lt;&#x2F;a&gt;, but that exacerbated the
+combinatorial feature support woes even more. Instead of just N different
+clients having problems with one home server, we now had M different server
+implementations combined with said N clients for a whole N-by-M compatibility
+matrix of problems. All of this just so a brand new user to get started chatting
+with their friends. Apparently there&#x27;s now
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;matrix-construct.github.io&#x2F;tuwunel&#x2F;&quot;&gt;Tuwunel&lt;&#x2F;a&gt; and
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;continuwuity.org&#x2F;&quot;&gt;Continuwuity&lt;&#x2F;a&gt;, but I&#x27;m too burnt out on Matrix as a
+whole to try to bark up that tree.&lt;&#x2F;p&gt;
+&lt;p&gt;Matrix has been around for 10+ years and has had major corporate backing, yet its
+UX still feels worse than any alpha-quality options on this list, including some
+of the clearly vibecoded projects that have been recently announced. This is
+truly an abysmal dogshit state of affairs for such a platform. It&#x27;s almost like
+the devs at Element and the greater Matrix community wants the experience to
+remain as broken as it is now.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EDIT 2026&#x2F;02&#x2F;18: Not even 24 hours after this post was published, a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;soatok.blog&#x2F;2026&#x2F;02&#x2F;17&#x2F;cryptographic-issues-in-matrixs-rust-library-vodozemac&#x2F;&quot;&gt;scathing
+report&lt;&#x2F;a&gt;
+came out detailing multiple side-channel vulnerabilities in Matrix.org&#x27;s Vodozemac
+library powering Matrix&#x27;s E2EE feature. I&#x27;m no cryptography expert and cannot
+evaluate the finer technical claims of the article, but the way Matrix.org
+handled this report on a person-to-person basis is deeply unprofessional. It&#x27;s
+really disappointing to see, and is pushing me even further away from it as
+a platform.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;signal&quot;&gt;Signal&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;signal.org&#x2F;#signal&quot;&gt;Signal&lt;&#x2F;a&gt; is &lt;em&gt;the&lt;&#x2F;em&gt; E2EE chat app and protocol. It&#x27;s
+FOSS software, and can be
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;signalapp&#x2F;Signal-Server&quot;&gt;self-hosted&lt;&#x2F;a&gt; (though with much
+difficulty). It supports text, voice, and video chat, and the desktop option
+supports screenshare, though it&#x27;s closer to Skype&#x27;s older model where there is a
+single channel of discussion and a call will notify everyone in the chat. Signal
+also comes with a high quality and accessible mobile app, and is arguably
+developed with a mobile-first approach.&lt;&#x2F;p&gt;
+&lt;p&gt;Signal is stunningly solid option for small groups and one-to-one chats, but I
+would caution against building any particularly large community on the platform.
+Signal, by default, supports up to 1,000 users in one group chat, but anyone
+using Discord right now knows how unruly that can be.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fluxer-app&quot;&gt;Fluxer.app&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;fluxer.app&#x2F;&quot;&gt;Fluxer.app&lt;&#x2F;a&gt; is a rather promising option, directly aiming
+to replace Discord. It&#x27;s clearly developed with the intention of being a direct
+replacement for Discord&#x27;s service, and has monetization built in from the get go.
+It seemingly has all of the features we expect out of Discord out of the box, and
+is free and open source software under AGPLv3, but currently not accepting any
+PRs due to an ongoing refactor.&lt;&#x2F;p&gt;
+&lt;p&gt;The project is really new, only being announced and open sourced within the last
+month. The entire project is 1.5 million lines of code and there is no git history
+prior to open sourcing. The author claims that they did not &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;blog.fluxer.app&#x2F;how-i-built-fluxer-a-discord-like-chat-app&#x2F;&quot;&gt;vibecode
+it&lt;&#x2F;a&gt; and they
+did the &quot;normal&quot; practice of squashing history when making an initial release,
+but I feel like that is just a plausibly deniable excuse, and will need to wait
+and see if they actually follow through with it. They&#x27;re currently not accepting
+that many PRs due to a &quot;ongoing codebase-wide refactor&quot;, and, for the same
+reasons, self hosting instructions are currently missing as a whole.&lt;&#x2F;p&gt;
+&lt;p&gt;One potential concern is that Fluxer.app is licensed under AGPLv3 with a CLA.
+This isn&#x27;t an uncommon combination to see used in FOSS rugpulls where the owner
+of a project takes it closed source, typically forcing a community fork in the
+process. This isn&#x27;t usually a hard dealbreaker, but I would rather not risk the
+headache of a secondary migration from losing trust yet again.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EDIT 2026&#x2F;02&#x2F;18: The author has published the
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fluxerapp&#x2F;fluxer&#x2F;tree&#x2F;refactor&quot;&gt;refactor&lt;&#x2F;a&gt;, which is in the
+open, and may soon be accepting PRs. They also &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fluxerapp&#x2F;fluxer&#x2F;commit&#x2F;3dce089fe2ea372d6f70c024fe060a2afefc4ce2&quot;&gt;removed the
+CLA requirement&lt;&#x2F;a&gt;.
+This is great to hear!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;sharkord&quot;&gt;Sharkord&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;sharkord.com&#x2F;&quot;&gt;Sharkord&lt;&#x2F;a&gt; is a relatively new FOSS project with the aim
+to be a direct Discord replacement. It supports basic text chat, voice chat,
+video chat, and no-audio screensharing at this current time. It was relatively
+easy to self host.&lt;&#x2F;p&gt;
+&lt;p&gt;However, due to how new it is, it&#x27;s currently riddled with bugs, and currently
+does not have a mobile app or PWA support. It&#x27;s unclear whether this is the
+result of vibecoding or just general developer incompetence. Given the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;selfhosted&#x2F;comments&#x2F;1r08bd8&#x2F;comment&#x2F;o4l2tr0&#x2F;&quot;&gt;author&#x27;s
+comments&lt;&#x2F;a&gt;
+on use of AI for the interface and their clearly AI generated profile
+pic on GitHub, there&#x27;s a high likelihood that a non-insignificant amount of the
+app was vibecoded and calls into question if they can be trusted to actually
+maintain the app long term.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;stoat-formerly-revolt&quot;&gt;Stoat (formerly Revolt)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;stoat.chat&#x2F;&quot;&gt;Stoat&lt;&#x2F;a&gt; was the option I tried long before any of this
+chaos, and honestly the one I&#x27;m rooting for the most. It aims to be a direct
+replacement for Discord. It&#x27;s FOSS and is self-hostable. It supports text chat,
+and previously supported voice chat until they decided to rewrite the backend for
+audio. It&#x27;s never supported video chat or screensharing, and does not have a
+usable mobile app yet.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s also set up such that self-hosting includes infrastructure for all of
+Discord. You can have the equivalent of multiple Discord servers on the same
+self-hosted instance. This poses some extra headache for the admins, as users can
+hide discussions that are out of reach of moderators or system administrators.&lt;&#x2F;p&gt;
+&lt;p&gt;Unfortunately, the development pace has not kept up and many of the missing
+fundamental features are not currently present.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;spacebar-formerly-fosscord&quot;&gt;Spacebar (formerly FOSScord)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;spacebar.chat&#x2F;&quot;&gt;Spacebar&lt;&#x2F;a&gt; is a project trying to create a 1:1 version of
+of Discord down to the API calls being made. They have a custom client and server
+that can work with each other or be used with Discord&#x27;s official API. It&#x27;s all
+FOSS and self-hostable.&lt;&#x2F;p&gt;
+&lt;p&gt;However, due to its nature in attempting to replicate Discord 1:1, it lacks a
+mobile app. At time of writing, it seems like Spacebar does not support anything
+tied to a voice channel in Discord.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;xmpp-with-fluux-messenger&quot;&gt;XMPP (with Fluux Messenger)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;processone&#x2F;fluux-messenger&quot;&gt;Fluux Messenger&lt;&#x2F;a&gt; from ProcessOne
+is a XMPP frontend that looks awfully like Discord. Any backing XMPP server can
+be used with it, such as ProcessOne&#x27;s
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;processone&#x2F;ejabberd&quot;&gt;ejabberd&lt;&#x2F;a&gt;. This should cover text chat
+like Discord fairly well, but will require additional effort to support an
+integration with Jitsi for voice, video, and screenshare.&lt;&#x2F;p&gt;
+&lt;p&gt;Fluux Messenger also has the same licensing issues as Fluxer.app. It&#x27;s also
+AGPLv3 with a CLA, but thankfully XMPP is an open protocol so any adequate
+frontend can be used as a substitute.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mumble&quot;&gt;Mumble&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.mumble.info&#x2F;&quot;&gt;Mumble&lt;&#x2F;a&gt; is a FOSS, self-hostable, VoIP software and is
+made to be close to Teamspeak in UX. It&#x27;s created with a desktop use case in mind
+but there are compatible third party mobile apps. Its voice channels are
+structured close to that of Discord&#x27;s, where users can hop in and out at any
+time, and the channels exist independently from any single given call. It&#x27;s a
+voice chat-first application with some level of support for text chat for those
+in a voice channel. Joining a server requires actively joining a voice channel.
+Unlike Discord, the text chat does not have long term text chat history. I think
+this is appropriate for a text chat that is purely supplemental to a voice chat,
+but that It does
+not support video chat or screensharing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;zulip-w-jitsi&quot;&gt;Zulip (w&#x2F; Jitsi)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;zulip.com&#x2F;&quot;&gt;Zulip&lt;&#x2F;a&gt; is a fully open source FOSS chat application that can
+be self hosted. What differentiates itself is the high number of integrations it
+has with other services. Most notably, it has a frontend integration with Jitsi,
+which support voice, video and screenshare. It has a usable mobile app.&lt;&#x2F;p&gt;
+&lt;p&gt;As a text chat, it&#x27;s probably the most complete and solid experience out of all
+of the options in this list. Zulip&#x27;s threading model, or &quot;topics&quot; as they&#x27;re
+called in Zulip vernacular, take getting used to, as every conversation is in a
+topic, and each channel does not have a top level discussion that can be branched
+from.&lt;&#x2F;p&gt;
+&lt;p&gt;The Jitsi integration as it currently stands does not act like Discord&#x27;s voice
+channels, where users can hop in and out at any time, but are tied to established
+calls tied to messages sent in a text channel. This might be viable in a
+productivity oriented community like FOSS development groups, but this may not be
+a good fit for large general purposes communities.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;Overall, I&#x27;m not too happy with the state of the viability of many of these
+alternatives. Many options have been around for 10+ years, and still do not come
+close to the convinence provided by Discord.&lt;&#x2F;p&gt;
+&lt;p&gt;Thus far, out of all of the options I&#x27;ve reviewed, Zulip, with Jitsi, might be
+the best immediate fit for the requirements outlined in this post. It seems like
+it ticks all of the boxes for a usable UX, solid self-hosting support, has a
+usable set of cross-platform clients, and seems to support all of the immediate
+fundamental features most Discord communities are used to. Its model isn&#x27;t a
+great 1:1 fit with what users expect out of a Discord server and its interface
+is definitely oriented for use as a business oriented chat, but, given enough
+time, I think most users could become accustomed to its use.&lt;&#x2F;p&gt;
+&lt;p&gt;Fluxer.app might be a viable alternative in the future, as its feature set
+aims to directly compete with that of Discord&#x27;s. However, the intent on
+monetization and lack of FOSS engagement, and poor self-hosting support. &lt;del&gt;and
+questionable licensing decisions casts doubt on its long term viability. In the
+case of a FOSS rugpull (a la &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;jellyfin.org&#x2F;docs&#x2F;general&#x2F;about&#x2F;#why-did-you-fork&quot;&gt;Emby vs
+Jellyfin&lt;&#x2F;a&gt;), I&#x27;m sure
+the community will be able to pick up the slack eventually, but that may be way
+too far out to consider for now, and I would rather not do a secondary migration
+in the case of such an event.&lt;&#x2F;del&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EDIT 2026&#x2F;02&#x2F;18: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fluxerapp&#x2F;fluxer&#x2F;commit&#x2F;3dce089fe2ea372d6f70c024fe060a2afefc4ce2&quot;&gt;They&#x27;ve dropped the
+CLA!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;That&#x27;s it for now.  As I try more alternatives, I&#x27;ll be sure to update this post
+with my observations. I don&#x27;t think it&#x27;s practical to migrate very large
+communities at the current moment, but keeping an alternative around in case shit
+really hits the fan may be a viable migration path forward.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;&#x2F;h1&gt;
+&lt;p&gt;This blog post was researched and edited by the following members of the
+discord.gg&#x2F;touhou community: Shio, ReUKing, Great Sage, Jordy, Mami,
+Photographicrat, and Ember.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;appendix-summary-table&quot;&gt;Appendix: Summary Table&lt;&#x2F;h1&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: left&quot;&gt;Name&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;FOSS&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Self-host&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Mobile&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Text&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Voice&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Video&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Screenshare&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: left&quot;&gt;Notes&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Matrix&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Poor user UX.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Sharkord&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Really buggy, possibly vibecoded&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Fluxer.app&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Stoat&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Low dev velocity.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;XMPP&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Jitsi&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Zulip&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Spacebar&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Mumble&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Signal&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Poorly suited for large communities.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Rocket.chat&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Free instance limited in the number of users.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;IRC&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Telegram&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;WhatsApp&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Poorly suited for large communities.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;QQ&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;WeChat&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;LINE&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Poorly suited for large communities.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Teamspeak&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Limited in the number of users.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Steam Chat&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Maximum 2 week TTL on messages&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Slack&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;Maximum 90 day TTL on messages (Free edition)&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Microsoft Teams&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Google Chat&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Root&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❓&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❓&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❓&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Guilded.gg&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Echoed.gg&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❌&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;✅&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❓&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;❓&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: left&quot;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;Requires one of the many community made mobile apps, feature support might
+be inconsistent.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;No mobile app but there is PWA support.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+</feed>
